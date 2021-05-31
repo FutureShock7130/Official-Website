@@ -1,15 +1,7 @@
 * {
     box-sizing: border-box;
 }
-<<<<<<< HEAD
 q
-=======
-
-html {
-    scroll-behavior: smooth;
-}
-
->>>>>>> 7cecd88483db1c7127628a3311f8166f03cae7f3
 #menu_control {
     position: absolute;
     z-index: 10;
@@ -272,7 +264,6 @@ nav a:hover{
         display: none;
     }
     
-<<<<<<< HEAD
     header{
         display: flex;
 
@@ -290,10 +281,6 @@ nav a:hover{
         display: flex;
         justify-content: flex-end;
         
-=======
-    .navbar{
-        display:  flex;
->>>>>>> 7cecd88483db1c7127628a3311f8166f03cae7f3
     }
 
     header nav a{
@@ -304,7 +291,6 @@ nav a:hover{
         border-bottom: none;
     }
 
-<<<<<<< HEAD
    
     header nav a:hover{
         
@@ -317,10 +303,6 @@ nav a:hover{
         width: 180px;
         margin: -30px 0px 0px -90px;
         font-size: 24px;
-=======
-    .navbar img{
-       margin: 0px 0px 0px 20px;
->>>>>>> 7cecd88483db1c7127628a3311f8166f03cae7f3
     }
 
     .intro_first .wrap{
