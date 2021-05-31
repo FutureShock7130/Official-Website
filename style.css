@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
 }
-
+q
 #menu_control {
     position: absolute;
-    z-index: 2;
+    z-index: 10;
 }
 
 header{
@@ -13,10 +13,11 @@ header{
     position: fixed;
     width:100%;
     height: 60px;
-    background: #D1D7D8;
+    background: #ffffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.navbar img{
+header img{
     padding: 5px 20px;
     height: 60px;
 }
@@ -36,13 +37,14 @@ header nav {
     transition: 0.5s;
 }
 
-input:checked~.navbar nav {
+input:checked~ nav {
     left: 0;
 }
 
 header label{
+    display: block;
     position: absolute;
-    top:0px;
+    top: 0;
     right:5px;
 }
 
@@ -69,6 +71,7 @@ nav a:hover{
 }
 
 .banner button{
+    background-color: #17A398;
     position: absolute;
     font-size: 20px;
     color: white;
@@ -79,11 +82,12 @@ nav a:hover{
     width: 90px;
     border: none;
     margin: -15px 0px 0px -45px;
-    background-color: rgba(251, 84, 33, 0.856);
 }
 
 .intro_first{
-    margin: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .wrap img{
@@ -108,9 +112,12 @@ nav a:hover{
     line-height: 28px;
 }
 
-.intro_frc .wrap{
-    background-color: rgba(255, 235, 235, 0.781);
+.intro_frc{
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
+
 
 .wrap h2{
     text-align: center;
@@ -120,9 +127,34 @@ nav a:hover{
     font-weight: 800;
 }
 
-.item{
+.about_us{
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.block4 {
+    height: 300px;
+    text-align: center;
+    padding: 10px 40px 0px 40px;
+    line-height: 28px;
+}
+
+
+.block4 img{
+    width: 100px;
+
+}
+
+
+.wrap.web{
+    display: none;
+}
+
+/* .item{
     margin: 20px 10px 20px 10px;
 }
+
 .item h3{
     font-family: Nunito;
     text-align: center;
@@ -138,13 +170,18 @@ nav a:hover{
 
 .item p{
     line-height: 28px;
-}
+} */
 
 .awards{
-    margin: 15px;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.awards .col_pic{
+    display: none;
 }
 .awards p{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .prospect .wrap{
@@ -152,6 +189,11 @@ nav a:hover{
 }
 .prospect h2{
     margin: 10px;
+}
+
+
+.prospect .card-content{
+    margin-top: 30px;
 }
 
 .prospect .card{
@@ -176,7 +218,8 @@ nav a:hover{
     margin: 60px;
 }
 
-.sponser h3{
+.sponser h2{
+    font-weight: 800;
     text-align: center;
     font-size: 32px;
     color: #4F4F4F;
@@ -184,10 +227,12 @@ nav a:hover{
     
 }
 
-.sponser h2{
+.sponser h3{
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 30, 30);
     font-size: 50px;
+    font-weight: 800;
 }
 
 .footer{
@@ -204,47 +249,200 @@ nav a:hover{
     font-family: 'Poppins', sans-serif;
 }
 
-.footer .icon{
-margin: 10px 0px;
+.footer .icon img{
+    width: 100px;
+    margin: 10px 0px;
 }
 
 .footer a{
     margin: 10px 5px 10px 5px;
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width:768px) {
+
+   header .menu_btn{
+        display: none;
+    }
     
-    .navbar{
-        display:  flex;
+    header{
+        display: flex;
+
+    }
+    header .logo{
+        width: 10%;
+    }
+    header nav{
+        background-color:transparent;
+        height: 60px;
+        width: 90%;
+        position: relative;
+        left:0;
+        top:0;
+        display: flex;
+        justify-content: flex-end;
         
     }
 
-    .navbar .logo{
-        width: 20%;
+    header nav a{
+        font-weight: 600;
+        transition: 0.5s;
+        font-family: 'Lato', sans-serif;
+        color: black;
+        border-bottom: none;
     }
 
-    .navbar img{
+   
+    header nav a:hover{
         
-       margin: 0px 0px 0px 20px;
-    }
-    .navbar nav{
-        text-align: right;
-        width: 80%;
-    }
-
-    .navbar nav a{
-        text-decoration: none;
-        font-family: 'Roboto', sans-serif;
-        font-size: 30px;
-        margin: 10px;
-       
-        line-height: 60px;
-        color: #4F4F4F;
-        transition: 0.3s;
-    }
-
-    .navbar nav a:hover{
+        
         color:rgb(236, 110, 110) ;
+    } 
+
+    .banner button{
+        height: 60px;
+        width: 180px;
+        margin: -30px 0px 0px -90px;
+        font-size: 24px;
     }
+
+    .intro_first .wrap{
+        padding-top: 80px;
+        margin: auto;
+        width: 960px;
+        display: flex;
+    }
+
+    .intro_first .wrap .col_text{
+        width: 60%;
+    }
+
+    .intro_frc .wrap{
+        padding-top: 80px;
+        margin: auto;
+        width: 960px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .intro_frc .wrap .col_text{
+        width: 60%;
+    }
+
+    .about_us .wrap{
+        padding-top: 80px;
+        margin: auto;
+        width: 960px;
+        display: flex;
+    }
+    
+    .about_us .wrap .col_text{
+        padding-top: 100px;
+        width: 60%;
+    }
+    
+    .carousel{
+        display: none;
+    }
+
+    .wrap.web{
+        display: block;
+        padding-top:40px ;
+        margin: auto;
+        width: 960px;
+        
+    }
+    .col_1{
+        width: 100%;
+        display: flex;
+        text-align: center;
+    }
+    .col_1 .item{
+        width: 33%;
+        margin: 0px 30px;
+    }
+
+    .col_2{
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .col_2 .item{
+        width: 33%;
+    }
+
+    .wrap.wrap.web img{
+        margin: auto;
+        width: 100px;
+    }
+
+    .awards .wrap{
+        padding-top: 80px;
+        margin: auto;
+        width: 960px;
+        display: flex;
+    }
+
+    .awards .wrap .col_text{
+        width: 50%;
+    }
+
+    .awards .wrap .col_text h2{
+        text-align: center;
+        font-size: 32px;
+        color: #4F4F4F;
+        font-family: Nunito;
+        font-weight: 800;
+    }
+
+    .awards .wrap .col_pic{
+        width: 50%;
+        display: inline;
+    }
+
+    .prospect .wrap{
+        padding-top: 80px;
+        margin: auto;
+        width: 960px;
+    }
+    
+    .card-content{
+        display: flex;
+    }
+    
+    .prospect .card{
+        margin:0px 30px;
+    }
+
+    .sponser{
+        margin-top: 100px;
+    }
+    
+    .footer .wrap{
+        margin:auto;
+        width: 80%;
+        display: flex;
+    }
+    .footer .wrap .text{
+        width: 60%;
+        text-align: left;
+        padding-top: 30px;
+        padding-left:10%;
+    }
+
+    .footer .wrap .icon{
+        display: flex;
+        width: 40%;
+    }
+
+    .footer .wrap .icon a{
+        margin: 0px 30px;
+    }
+
+
+
+
+   
 
 }

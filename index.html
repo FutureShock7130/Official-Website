@@ -9,28 +9,28 @@
     <title>FRC 7130</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 </head>
 
 <body>
 
     <header>
         <input type="checkbox" name="" id="menu_control">
-        <div class="navbar">
-            <div class="logo">
-                <img src="./pic/logo.png">
-            </div>
-            <label for="menu_control" class="menu_btn">
-                <img src="./pic/menu.png" alt="">
-            </label>
-            <nav>
-                <a href="#">HOME</a>
-                <a href="#">ABOUT FIRST</a>
-                <a href="#">ABOUT US</a>
-                <a href="#">AWARDS</a>
-                <a href="#">SPONSERS</a>
-            </nav>
-
+        <div class="logo">
+            <img src="./pic/logo.png">
         </div>
+        <label for="menu_control" class="menu_btn">
+            <img src="./pic/menu.png" alt="">
+        </label>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT FIRST</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">AWARDS</a>
+            <a href="#">SPONSERS</a>
+        </nav>
     </header>
 
     <div class="banner">
@@ -73,7 +73,7 @@
                 <img src="./pic/frc7130_logo.jpg">
             </div>
             <div class="col_text">
-                <h2>ABOUT US</h2>
+                <h2>About Us</h2>
                 <p>我們是 FRC team 7130 Futureshock,一個來自臺中明道中學的隊伍。創立於 2017 年,Futureshock
                     作為新手團隊已經在各類練習賽及區域賽中獲得佳績。我們的成員皆充滿對機器人及電腦工程的熱情,不管是團隊內的大小事,我們都會盡全力做到最好,更期待讓世界看見我們,看見台灣。</p>
             </div>
@@ -83,41 +83,99 @@
     <div class="team">
         <div class="wrap">
             <h2>Meet the Teams</h2>
-            <div class="item">
-                <h3>機械組</h3>
-                <img src="./pic/mechanic.png">
-                <p>和設計組密切討論，將設計組的草圖實現，製作機器人的零件與組裝。組裝完成後布置場地，並且排除測試後的故障，讓機器人順利運作。</p>
-            </div>
-            <div class="item">
-                <h3>配電組</h3>
-                <img src="./pic/elertrical.png">
-                <p>配電就像機器人的神經系統一樣,讓機器人的每個部位能有動力,我們會幫助機械組做的機構配電讓機器人動起來, 平時會學習機器人的配電和氣動系統,也會和機械組討論機器人製作方向。</p>
-            </div>
-            <div class="item">
-                <h3>行政組</h3>
-                <img src="./pic/administration.png">
-                <p>行政組協助隊務推動,關心各組出席狀況並對會議記錄進行檢討, 以及承辦隊上活動,還有辦理活動和修訂團隊規章。</p>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="block4 d-block w-100">
+                            <h3>機械組</h3>
+                            <img src="./pic/mechanic.png">
+                            <p>和設計組密切討論，將設計組的草圖實現，製作機器人的零件與組裝。組裝完成後布置場地，並且排除測試後的故障，讓機器人順利運作。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="block4 d-block w-100">
+                            <h3>配電組</h3>
+                            <img src="./pic/elertrical.png">
+                            <p>配電就像機器人的神經系統一樣,讓機器人的每個部位能有動力,我們會幫助機械組做的機構配電讓機器人動起來, 平時會學習機器人的配電和氣動系統,也會和機械組討論機器人製作方向。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="block4 d-block w-100">
+                            <h3>行政組</h3>
+                            <img src="./pic/administration.png">
+                            <p>行政組協助隊務推動,關心各組出席狀況並對會議記錄進行檢討, 以及承辦隊上活動,還有辦理活動和修訂團隊規章。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="block4 d-block w-100">
+                            <h3>設計組</h3>
+                            <img src="./pic/design.png">
+                            <p>分析競賽任務，將各個功能整合在空間有限的底盤上，藉由Solidworks畫出他們的想法，在組裝完成後反覆測試。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="block4 d-block w-100">
+                            <h3>程式組</h3>
+                            <img src="./pic/programming.png">
+                            <p>使用Java語言根據自己團隊所設計的機器人做程式的編寫及設計，並且做優化及測試</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
 
-        <div class="wrap">
-            <div class="item">
-                <h3>設計組</h3>
-                <img src="./pic/design.png">
-                <p>分析競賽任務，將各個功能整合在空間有限的底盤上，藉由Solidworks畫出他們的想法，在組裝完成後反覆測試。</p>
+        <div class="wrap web">
+            <div class="col_1">
+                <div class="item">
+                    <h3>機械組</h3>
+                    <img src="./pic/mechanic.png">
+                    <p>和設計組密切討論，將設計組的草圖實現，製作機器人的零件與組裝。組裝完成後布置場地，並且排除測試後的故障，讓機器人順利運作。</p>
+                </div>
+                <div class="item">
+                    <h3>配電組</h3>
+                    <img src="./pic/elertrical.png">
+                    <p>配電就像機器人的神經系統一樣,讓機器人的每個部位能有動力,我們會幫助機械組做的機構配電讓機器人動起來, 平時會學習機器人的配電和氣動系統,也會和機械組討論機器人製作方向。</p>
+                </div>
+                <div class="item">
+                    <h3>行政組</h3>
+                    <img src="./pic/administration.png">
+                    <p>行政組協助隊務推動,關心各組出席狀況並對會議記錄進行檢討, 以及承辦隊上活動,還有辦理活動和修訂團隊規章。</p>
+                </div>
             </div>
-            <div class="item">
-                <h3>程式組</h3>
-                <img src="./pic/programming.png">
-                <p>使用Java語言根據自己團隊所設計的機器人做程式的編寫及設計，並且做優化及測試</p>
+
+            <div class="col_2">
+
+                <div class="item">
+                    <h3>設計組</h3>
+                    <img src="./pic/design.png">
+                    <p>分析競賽任務，將各個功能整合在空間有限的底盤上，藉由Solidworks畫出他們的想法，在組裝完成後反覆測試。</p>
+                </div>
+                <div class="item">
+                    <h3>程式組</h3>
+                    <img src="./pic/programming.png">
+                    <p>使用Java語言根據自己團隊所設計的機器人做程式的編寫及設計，並且做優化及測試</p>
+                </div>
             </div>
         </div>
     </div>
 
+
+
     <div class="awards">
         <div class="wrap">
-            <h2>AWARDS</h2>
+
             <div class="col_text">
+                <h2>Awards</h2>
                 <p>◾ 2019中科FRC 台灣季後賽優秀工程獎</p>
                 <p>◾ 2019中科FRC 台灣季後賽 工業設計獎</p>
                 <p>◾ 2019 FRC 正式賽積分第二</p>
@@ -127,61 +185,75 @@
                 <p>◾ 2021南科FRC 模擬賽 聯盟賽季軍</p>
             </div>
             <div class="col_pic">
-
+                <img src="/pic/award.png" alt="">
             </div>
         </div>
     </div>
 
     <div class="prospect">
+
         <div class="wrap">
-            <h2>PROSPECTS</h2>
-            <div class="card">
-                <img src="./pic/technical-support.png">
-                <h3>團隊技術</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <br>
-            <div class="card">
-                <img src="./pic/trophy.png">
-                <h3>冠軍聯盟</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <br>
-            <div class="card">
-                <img src="./pic/social-media.png">
-                <h3>對外關係</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h2>Prospects</h2>
+            <div class="card-content">
+                <div class="card">
+                    <img src="./pic/technical-support.png">
+                    <h3>團隊技術</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <br>
+                <div class="card">
+                    <img src="./pic/trophy.png">
+                    <h3>冠軍聯盟</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <br>
+                <div class="card">
+                    <img src="./pic/social-media.png">
+                    <h3>對外關係</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="sponser">
         <div class="wrap">
-            <h3>SPONSERS</h3>
-            <h2>Wait you now !</h2>
+            <h2>Sponsers</h2>
+            <h3>Wait you now!</h3>
         </div>
     </div>
+
+    <div class="footer">
+        <div class="wrap">
+            <div class="text">
+                <p>Address: 台中市烏日區中山路一段497號 41401, Taichung City, Wuri District, No. 467, Section 1. Zhongshan Rd.</p>
+                <p>Email: frc7130@ms.mingdao.edu.tw</p>
+            </div>
+            <div class="icon">
+                <a href="https://www.instagram.com/frc7130_future_shock/">
+                    <img src="./pic/instagram.png" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UCrr_gyEFzddEHeuWRg1fU7Q/featured">
+                    <img src="./pic/youtube.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/fablabMDHSfrc7130">
+                    <img src="./pic/facebook.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; copyright 2021 by benbebobo149
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+
 </body>
 
-<div class="footer">
-    <div class="text">
-        <p>Address: 台中市烏日區中山路一段497號 41401, Taichung City, Wuri District, No. 467, Section 1. Zhongshan Rd.</p>
-        <p>Email: frc7130@ms.mingdao.edu.tw</p>
-    </div>
-    <div class="icon">
-        <a href="https://www.instagram.com/frc7130_future_shock/">
-            <img src="./pic/instagram.png" alt="">
-        </a>
-        <a href="https://www.youtube.com/channel/UCrr_gyEFzddEHeuWRg1fU7Q/featured">
-            <img src="./pic/youtube.png" alt="">
-        </a>
-        <a href="https://www.facebook.com/fablabMDHSfrc7130">
-            <img src="./pic/facebook.png" alt="">
-        </a>
-    </div>
-    <div class="copyright">
-        &copy; copyright 2021 by benbebobo149
-    </div>
-</div>
+
 
 </html>
