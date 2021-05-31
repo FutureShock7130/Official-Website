@@ -1,6 +1,12 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+  
 q
 #menu_control {
     position: absolute;
@@ -70,7 +76,9 @@ nav a:hover{
     width: 100%;
 }
 
-.banner button{
+.banner a{
+    text-align: center;
+    text-decoration: none;
     background-color: #17A398;
     position: absolute;
     font-size: 20px;
@@ -81,7 +89,7 @@ nav a:hover{
     height: 30px;
     width: 90px;
     border: none;
-    margin: -15px 0px 0px -45px;
+    margin: 10px 0px 0px -45px;
 }
 
 .intro_first{
@@ -298,7 +306,8 @@ nav a:hover{
         color:rgb(236, 110, 110) ;
     } 
 
-    .banner button{
+    .banner a{
+        padding: 10px 0px 0px 0px;
         height: 60px;
         width: 180px;
         margin: -30px 0px 0px -90px;
@@ -439,10 +448,4 @@ nav a:hover{
     .footer .wrap .icon a{
         margin: 0px 30px;
     }
-
-
-
-
-   
-
 }
