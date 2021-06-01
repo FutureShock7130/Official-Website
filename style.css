@@ -6,8 +6,87 @@ html {
     scroll-behavior: smooth;
 }
 
-  
-q
+.pic{
+    width: 100%;
+    height: 100vh;
+}
+.pic_pic_1{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./pic/pic_1.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 60%;
+    background-attachment: fixed; 
+}
+
+.pic_pic_2{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./pic/pic_2.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 60%;
+    background-attachment: fixed; 
+}
+
+.pic_pic_3{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./pic/pic_3.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 60%;
+    background-attachment: fixed; 
+}
+
+.pic_pic_4{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./pic/pic_4.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 60%;
+    background-attachment: fixed; 
+}
+
+.pic_pic_7{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./pic/pic_7.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 60%;
+    background-attachment: fixed; 
+}
+
+.pic_pic_6{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./pic/pic_6.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 60%;
+    background-attachment: fixed; 
+}
+
+.pic_pic_9{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./pic/pic_9.jpg);
+    background-size: cover; 
+    background-position: center;
+    opacity: 60%;
+    background-attachment: fixed; 
+}
+
 #menu_control {
     position: absolute;
     z-index: 10;
@@ -94,8 +173,8 @@ nav a:hover{
 
 .intro_first{
     padding: 10px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .wrap img{
@@ -122,12 +201,13 @@ nav a:hover{
 
 .intro_frc{
     padding: 10px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 
 .wrap h2{
+    margin-top: 50px;
     text-align: center;
     font-size: 32px;
     color: #4F4F4F;
@@ -137,8 +217,8 @@ nav a:hover{
 
 .about_us{
     padding: 10px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .block4 {
@@ -223,7 +303,7 @@ nav a:hover{
 }
 
 .sponser{
-    margin: 60px;
+    margin: 100px;
 }
 
 .sponser h2{
@@ -412,6 +492,7 @@ nav a:hover{
 
     .prospect .wrap{
         padding-top: 80px;
+        padding-bottom: 80px;
         margin: auto;
         width: 960px;
     }
