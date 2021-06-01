@@ -76,6 +76,16 @@ html {
     background-attachment: fixed; 
 }
 
+.pic_pic_9{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./pic/pic_9.jpg);
+    background-size: cover; 
+    background-position: center;
+    opacity: 60%;
+    background-attachment: fixed; 
+}
 
 #menu_control {
     position: absolute;
