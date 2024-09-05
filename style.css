@@ -302,11 +302,11 @@ nav a:hover{
     margin: 10px 0px 10px 0px;
 }
 
-.sponser{
+.sponsor{
     margin: 100px;
 }
 
-.sponser h2{
+.sponsor h2{
     font-weight: 800;
     text-align: center;
     font-size: 32px;
@@ -315,7 +315,7 @@ nav a:hover{
     
 }
 
-.sponser h3{
+.sponsor h3{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 30, 30);
@@ -505,7 +505,7 @@ nav a:hover{
         margin:0px 30px;
     }
 
-    .sponser{
+    .sponsor{
         margin-top: 100px;
     }
     
