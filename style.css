@@ -217,7 +217,7 @@ nav a:hover{
 
 .about_us{
     padding: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     margin-top: 50px;
 }
 
@@ -401,8 +401,14 @@ nav a:hover{
         display: flex;
     }
 
+    .intro_first .wrap .col_pic{
+        padding-top: 100px;
+        padding-right: 50px;
+        width: 55%;
+    }
+
     .intro_first .wrap .col_text{
-        width: 60%;
+        width: 40%;
     }
 
     .intro_frc .wrap{
@@ -413,6 +419,10 @@ nav a:hover{
         flex-direction: row-reverse;
     }
     
+    .intro_frc .wrap .col_pic{
+        padding-left: 20px;
+    }
+
     .intro_frc .wrap .col_text{
         width: 60%;
     }
@@ -425,7 +435,12 @@ nav a:hover{
     }
     
     .about_us .wrap .col_text{
-        padding-top: 100px;
+        padding-top: 35px;
+        width: 60%;
+    }
+    
+    .about_us .wrap .col_pic {
+        padding-right: 20px;
         width: 60%;
     }
     
