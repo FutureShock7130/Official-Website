@@ -93,13 +93,13 @@ html {
 }
 
 header{
-    z-index:1;
-    width: 100%;
     position: fixed;
-    width:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 60px;
-    background: #ffffff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    z-index: 1000;
 }
 
 header img{
@@ -114,12 +114,11 @@ header input{
 
 header nav {
     position: absolute;
-    height: 100vh;
-    width: 60%;
-    background-color: rgb(47, 64, 223);
-    top: 60px;
-    left: -100%;
-    transition: 0.5s;
+    height: 60px;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 input:checked~ nav {
@@ -135,19 +134,42 @@ header label{
 
 header nav a{
     color: white;
-    padding: 20px;
-    font-size: 24px;
+    padding: 0 10px;
+    font-size: 16px;
     text-decoration: none;
     display: block;
     border-bottom: 2px solid white;
+    white-space: nowrap;
 }
 
 nav a:hover{
     color:rgb(236, 110, 110) ;
 }
 
-.banner{
-    position: relative;
+.banner {
+    position: relative;  /* This establishes the positioning context */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;          /* Move down 50% from the top */
+    left: 50%;         /* Move right 50% from the left */
+    transform: translate(-50%, -50%);  /* Perfect center adjustment! */
+    text-align: center;  /* Centers the text horizontally */
+    width: 100%;       /* Takes full width to ensure center alignment */
+    color: white;      /* Keep your chosen color here! */
+}
+
+.banner-text h1 {
+    font-size: 72px;
+    margin: 0 auto;    /* Centers with auto margins */
+    padding: 0;        /* Removes any extra spacing */
+}
+
+.banner-text h2 {
+    font-size: 24px;
+    margin: 20px auto 0;  /* Top spacing between h1 and h2 */
+    padding: 0;
 }
 
 .banner img{
@@ -302,6 +324,20 @@ nav a:hover{
     margin: 10px 0px 10px 0px;
 }
 
+.frc_tutorial_resources{
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.frc_tutorial_resources_programming a{
+    margin: 10px;
+    font-size: 16px;
+    
+}
+
 .sponser{
     margin: 100px;
 }
@@ -383,8 +419,28 @@ nav a:hover{
     header nav a:hover{
         
         
-        color:rgb(236, 110, 110) ;
+        color:rgb(24, 72, 133) ;
     } 
+
+    nav a {
+        font-size: 16px;
+        padding: 0 10px;
+        white-space: nowrap;
+    }
+    
+    /* Make it responsive for smaller screens uwu */
+    @media (max-width: 768px) {
+        header nav {
+            height: auto;
+            width: 60%;
+            background-color: rgb(47, 64, 223);
+        }
+        
+        nav a {
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
 
     .banner a{
         padding: 10px 0px 0px 0px;
@@ -529,4 +585,103 @@ nav a:hover{
     .footer .wrap .icon a{
         margin: 0px 30px;
     }
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+    }
+    
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .tutorial-content {
+        padding-top: 80px;
+        padding: 40px 0;
+    }
+    
+    .tutorial-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .tutorial-section {
+        margin: 60px 0;
+        padding: 20px;
+    }
+    
+    .tutorial-section h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .tutorial-grid {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+    
+    .tutorial-card {
+        display: block;
+        background: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+        margin: 1px 0;
+    }
+    
+    .tutorial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        background: #e8e8e8;
+    }
+    
+    .tutorial-card h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #2f40df;
+    }
+    
+    .tutorial-card p {
+        margin-bottom: 20px;
+    }
+    
+    .download-icon {
+        font-size: 32px;
+        margin-top: 10px;
+    }
+    
+    .tutorial-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #2f40df;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 15px;
+        transition: background 0.3s ease;
+    }
+    
+    .tutorial-btn:hover {
+        background: #1a2bb8;
+        color: white;
+    }
+
+    .tutorial-content{
+        padding-top: 80px;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
