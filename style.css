@@ -244,18 +244,26 @@ nav a:hover{
 }
 
 .block4 {
-    height: 300px;
+    padding: 20px;
+    margin: 15px;
     text-align: center;
-    padding: 10px 40px 0px 40px;
-    line-height: 28px;
+    transition: transform 0.3s ease;
 }
 
-
-.block4 img{
-    width: 100px;
-
+.block4:hover {
+    transform: translateY(-5px);  /* adds a wittle hover effect! */
 }
 
+.block4 img {
+    max-width: 150px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.block4 p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
 
 .wrap.web{
     display: none;
@@ -684,4 +692,23 @@ nav a:hover{
 body {
     margin: 0;
     padding: 0;
+}
+
+.carousel {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    min-height: 300px;  /* or whatever height you want! */
+}
+
+.block4 {
+    text-align: center;
+    padding: 20px;
+}
+
+.block4 img {
+    max-width: 200px;  /* adjust as needed! */
+    margin: 20px auto;
 }
