@@ -627,65 +627,33 @@ nav a:hover{
     }
     
     .tutorial-grid {
-        max-width: 600px;
-        margin: 40px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+        gap: 20px;
+        justify-content: center;
         padding: 20px;
     }
     
     .tutorial-card {
-        display: block;
-        background: #f5f5f5;
+        background: #fff;
         padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         text-decoration: none;
         color: inherit;
-        text-align: center;
-        margin: 1px 0;
+        transition: transform 0.2s ease;
+        display: block;
+        width: 100%;
     }
     
     .tutorial-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        background: #e8e8e8;
-    }
-    
-    .tutorial-card h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
-        color: #2f40df;
-    }
-    
-    .tutorial-card p {
-        margin-bottom: 20px;
     }
     
     .download-icon {
-        font-size: 32px;
-        margin-top: 10px;
-    }
-    
-    .tutorial-btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background: #2f40df;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 15px;
-        transition: background 0.3s ease;
-    }
-    
-    .tutorial-btn:hover {
-        background: #1a2bb8;
-        color: white;
-    }
-
-    .tutorial-content{
-        padding-top: 80px;
         text-align: center;
-        padding-bottom: 60px;
+        font-size: 1.5em;
+        margin-top: 10px;
     }
 }
 
