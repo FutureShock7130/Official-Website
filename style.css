@@ -98,7 +98,7 @@ header{
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: white;
+    background-color: #252526 !important;
     z-index: 1000;
 }
 
@@ -211,7 +211,6 @@ nav a:hover{
     padding: 0px 0px 5px 0px;
     text-align: center;
     font-size: 32px;
-    color: #4F4F4F;
     font-family: Nunito;
     font-weight: 800;
 }
@@ -302,6 +301,36 @@ nav a:hover{
     font-size: 16px;
 }
 
+.prospect {
+    background-color: #1e1e1e !important;  /* Match body background */
+    color: #ffffff;
+}
+
+.prospect .card {
+    background-color: #2d2d2d;  /* Slightly lighter than background */
+    border: 1px solid #404040;  /* Subtle border */
+    transition: all 0.3s ease;
+}
+
+.prospect .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(86, 156, 214, 0.2);  /* VS Code blue shadow */
+}
+
+.prospect .card h3 {
+    color: #ffffff;
+}
+
+.prospect .card p {
+    color: #d4d4d4;  /* Slightly dimmer white for better readability */
+}
+
+.prospect .card img {
+    /* If the icons are dark, invert them */
+    filter: invert(1);
+    opacity: 0.9;  /* Slightly reduce opacity for better look */
+}
+
 .prospect .wrap{
     text-align: center;
 }
@@ -368,10 +397,53 @@ nav a:hover{
 }
 
 .footer{
-    width: 100%;
-    background: #D1D7D8;
+    background-color: #141414 !important;
+}
+
+.footer .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer .text {
+    margin-bottom: 30px;
+}
+
+.footer .text p {
+    color: #d4d4d4;
+    margin: 10px 0;
+}
+
+.footer .icon {
+    display: flex;
+    gap: 30px;  /* Increased gap between icons */
+    justify-content: center;
+}
+
+/* Bigger icons */
+.footer .icon img {
+    width: 45px;  /* Increased from 30px */
+    height: 45px;  /* Increased from 30px */
+    object-fit: contain;
+    filter: brightness(0.9);
+    transition: all 0.3s ease;
+}
+
+.footer .icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;  /* Increased from 40px */
+    height: 60px;  /* Increased from 40px */
+    padding: 7px;  /* Slightly more padding */
+}
+
+.footer .copyright {
+    margin-top: 30px;
     text-align: center;
-    padding: 10px;
+    color: #808080;
+    font-size: 0.9em;
 }
 
 .footer p{
@@ -597,12 +669,42 @@ nav a:hover{
     .fade-in {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+        transition: all 1s ease;
+        will-change: opacity, transform;
     }
     
-    .fade-in.visible {
+    .fade-in-visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    /* Sponsor item animations */
+    .sponsor-item {
+        opacity: 0;
+        transform: translateX(-50px);  /* Start from left */
+        transition: all 1s ease;
+    }
+
+    /* Fade in from left one by one */
+    .fade-in-visible .sponsor-item:nth-child(1) { 
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
+        transition-delay: 0.2s; 
+    }
+    .fade-in-visible .sponsor-item:nth-child(2) { 
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0.4s; 
+    }
+    .fade-in-visible .sponsor-item:nth-child(3) { 
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0.6s; 
+    }
+    .fade-in-visible .sponsor-item:nth-child(4) { 
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0.8s; 
     }
 
     .tutorial-content {
@@ -612,6 +714,13 @@ nav a:hover{
     
     .tutorial-content h1 {
         font-size: 48px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .tutorial-content p {
+        font-size: 16px;
         margin-bottom: 20px;
         text-align: center;
     }
@@ -628,10 +737,17 @@ nav a:hover{
     
     .tutorial-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+        grid-template-columns: repeat(3, 1fr);  /* Makes 3 equal columns */
         gap: 20px;
-        justify-content: center;
         padding: 20px;
+        max-width: 1200px;  /* Adjust this for overall grid width */
+        margin: 0 auto;
+    }
+
+    .tutorial-grid h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-align: center;
     }
     
     .tutorial-card {
@@ -641,25 +757,71 @@ nav a:hover{
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         text-decoration: none;
         color: inherit;
-        transition: transform 0.2s ease;
-        display: block;
-        width: 100%;
+        transition: all 0.2s ease;
+        
+        /* Add these to make credits stick to bottom */
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;  /* Adjust this value based on your needs */
+        position: relative;
     }
     
     .tutorial-card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     
+    .file-credits {
+        margin-top: auto;  /* This pushes credits to bottom */
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+        font-size: 0.8em;
+        color: #666;
+    }
+
     .download-icon {
-        text-align: center;
-        font-size: 1.5em;
-        margin-top: 10px;
+        margin: 15px 0;  /* Add some space between content and credits */
+    }
+
+    /* Makes it responsive! */
+    @media (max-width: 768px) {
+        .tutorial-grid {
+            grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablets */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .tutorial-grid {
+            grid-template-columns: 1fr;  /* 1 column on phones */
+        }
     }
 }
 
 body {
     margin: 0;
     padding: 0;
+    opacity: 1 !important;
+    background-color: #1e1e1e !important;  /* Dark grey background */
+    color: #ffffff !important;  /* White text */
+}
+
+/* Make sure links and other text elements are also white */
+p, h1, h2, h3, h4, h5, h6, span, div {
+    color: #ffffff;
+}
+
+/* Keep links visible */
+a {
+    color: #569cd6;  /* VS Code blue for links */
+}
+
+a:hover {
+    color: #9cdcfe;  /* Lighter blue on hover */
+}
+
+/* Make sure headers and important text stay white */
+.section-title, .content-title {
+    color: #ffffff !important;
 }
 
 .carousel {
@@ -680,3 +842,403 @@ body {
     max-width: 200px;  /* adjust as needed! */
     margin: 20px auto;
 }
+
+.team-logo {
+    width: 926px;
+    height: 810px;
+    object-fit: contain;  /* This keeps the aspect ratio nice and clean! */
+    max-width: 100%;     /* This makes it responsive for mobile devices */
+    height: auto;        /* This maintains aspect ratio when scaling down */
+}
+
+.col_pic {
+    width: 50%;  /* Takes up half the container */
+    padding: 20px;
+}
+
+.col_pic img {
+    width: 100%;
+    max-width: 463px;     /* Half of 926px for better scaling */
+    height: auto;         /* Maintains aspect ratio */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sponsor-item.amd {
+    grid-column: span 2;
+    min-height: 250px;
+}
+
+.sponsor-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #666666 !important;
+    border-radius: 8px;
+    min-height: 200px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);  /* Bouncy animation */
+    cursor: pointer;
+}
+
+/* Enhanced hover effect */
+.sponsor-item:hover {
+    transform: translateY(-10px) scale(1.05);  /* Added scale */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);  /* Deeper shadow */
+    background-color: #777777 !important;
+    z-index: 1;  /* Ensure it pops above others */
+}
+
+/* Logo sizes remain the same */
+.amd-size {
+    max-width: 500px !important;
+}
+
+.igus-size {
+    max-width: 400px !important;
+    min-width: 350px;
+}
+
+.misumi-size {
+    max-width: 400px !important;
+    min-width: 320px;
+}
+
+.ping3d-size {
+    max-width: 350px !important;
+    min-width: 300px;
+}
+
+.sponser h2{
+    text-align: center;
+}
+
+.sponsor-item {
+    padding: 20px;
+    transition: transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.sponsor-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Base class */
+.sponsor-logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Sponsor logo sizes in percentages */
+img.sponsor-logo.igus-size {
+    width: 30%;  /* Adjust percentage as needed */
+}
+
+img.sponsor-logo.misumi-size {
+    width: 40%;  /* Adjust percentage as needed */
+}
+
+img.sponsor-logo.ping3d-size {
+    width: 80%;  /* Adjust percentage as needed */
+}
+
+img.sponsor-logo.amd-size {
+    width: 50%;  /* Adjust percentage as needed */
+}
+
+/* Container to control overall scale */
+.sponsor-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.sponsors-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.sponsors-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 50px;
+    margin-top: 120px;
+    position: relative;
+}
+
+/* Add the underline effect if the Prospects title has one */
+.sponsors-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #569cd6;  /* VS Code blue for accent */
+}
+
+/* Optional: Add a code-like prefix */
+.sponsors-title::before {
+    content: "class ";
+    color: #569cd6;
+}
+
+/* Optional: Add brackets */
+.sponsors-title::after {
+    content: " {";
+    color: #569cd6;
+}
+
+.sponsor-logo{
+    max-width: 500px; 
+    height: auto;
+}
+
+
+
+/* Specific sizes for each sponsor */
+/* .sponsor-item.igus .sponsor-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.sponsor-item.ping3d .sponsor-logo {
+    max-width: 1000px;
+    height: auto;
+} */
+
+.snow-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0.3;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+    will-change: opacity, transform;
+}
+
+.fade-in-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Reset any conflicting styles */
+body {
+    opacity: 1 !important;
+}
+
+.banner {
+    opacity: 1 !important;
+}
+
+/* Sponsor item animations */
+.sponsor-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-visible .sponsor-item:nth-child(1) { 
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s; 
+}
+.fade-in-visible .sponsor-item:nth-child(2) { 
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s; 
+}
+.fade-in-visible .sponsor-item:nth-child(3) { 
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s; 
+}
+.fade-in-visible .sponsor-item:nth-child(4) { 
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s; 
+}
+
+.section-divider {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #333, transparent);
+    margin: 50px auto;
+    opacity: 0.5;
+}
+
+/* Make sure cards and sections are visible */
+.tutorial-card, .block4, .sponsor-item {
+    background-color: rgba(255, 255, 255, 0.05);  /* Slightly lighter than background */
+    border-radius: 8px;
+}
+
+/* Add subtle glow to headings */
+h1, h2, h3 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;  /* This can help prevent background issues */
+}
+
+/* Make the logo container transparent */
+.logo {
+    background-color: transparent !important;
+    height: 60px;  /* Match your navbar height */
+    display: flex;
+    align-items: center;
+}
+
+/* Control the image size */
+.logo img {
+    max-height: 50px;  /* Slightly smaller than container */
+    width: auto;  /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Ensure the header/navbar is using the dark theme color */
+header {
+    background-color: #252526 !important;  /* Same as navbar color */
+}
+
+.navbar {
+    background-color: #252526 !important;
+}
+
+/* Override the grey color for all h2s */
+h2 {
+    color: #ffffff !important;  /* Force white color */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);  /* Add glow */
+}
+
+/* Remove the color property from .col_text h2 */
+.col_text h2 {
+    padding: 0px 0px 5px 0px;
+    text-align: center;
+    font-size: 32px;
+    font-family: Nunito;
+    font-weight: 800;
+}
+
+/* Update navbar link colors */
+.navbar-nav .nav-link {
+    color: #ffffff !important;  /* Force white color */
+    transition: color 0.3s ease;  /* Smooth transition for hover */
+}
+
+/* Optional: hover effect */
+.navbar-nav .nav-link:hover {
+    color: #569cd6 !important;  /* VS Code blue on hover */
+}
+
+.sponsor-invitation {
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1400px;
+}
+
+.invitation-card {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.invitation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.invitation-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    filter: invert(1);  /* If using a dark icon */
+}
+
+.invitation-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.invitation-card p {
+    color: #d4d4d4;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.sponsor-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #569cd6;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.sponsor-button:hover {
+    background-color: #4a89c7;
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+
