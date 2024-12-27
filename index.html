@@ -40,13 +40,9 @@
     <div class="snow-container"></div>
 
     <header>
-        <input type="checkbox" name="" id="menu_control">
         <div class="logo">
-            <img src="pic/frc7130logo.png">
+            <img src="pic/frc7130logo.png" alt="FRC 7130 Future Shock Logo">
         </div>
-        <label for="menu_control" class="menu_btn">
-            <img src="./pic/menu.png" alt="">
-        </label>
         <nav class="navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -66,10 +62,20 @@
                         <a class="nav-link" href="#awards">AWARDS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sponsers">SPONSERS</a>
+                        <a class="nav-link" href="#sponsers">SPONSORS</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./programming.html">PROGRAMMING TEAM</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamsDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            TEAMS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="teamsDropdown">
+                            <li><a class="dropdown-item" href="./programming.html">Programming Team</a></li>
+                            <li><a class="dropdown-item" href="./mechanical.html">Mechanical Team</a></li>
+                            <li><a class="dropdown-item" href="./electrical.html">Electrical Team</a></li>
+                            <li><a class="dropdown-item" href="./design.html">Design Team</a></li>
+                            <li><a class="dropdown-item" href="./administrative.html">Administrative Team</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -178,11 +184,13 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="block4 d-block">
-                            <h3>程式組</h3>
-                            <img src="./pic/programming.png" loading="lazy">
-                            <p>使用Java語言根據自己團隊所設計的機器人做程式的編寫及設計，並且做優化測試。</p>
-                        </div>
+                        <a href="./programming.html" class="team-link">
+                            <div class="block4 d-block">
+                                <h3>程式組</h3>
+                                <img src="./pic/programming.png" loading="lazy">
+                                <p>使用Java語言根據自己團隊所設計的機器人做程式的編寫及設計，並且做優化測試。</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -250,8 +258,18 @@
         <div class="wrap">
             <h2>FRC Tutorial Resources</h2>
             <p>FRC 7130 Future Shock 提供一系列的教學資源，包括機器人設計、程式編寫、配電系統等，幫助新成立的隊伍快速上手。</p>
-            <div class="frc_tutorial_resources">
-                <h3><a href="tutorials.html">教學資料下載</a></h3>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="tutorialDropdown" role="button" 
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    教學資源
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="tutorialDropdown">
+                    <li><a class="dropdown-item" href="./tutorials/programming.html">Programming Tutorials</a></li>
+                    <li><a class="dropdown-item" href="./tutorials/mechanical.html">Mechanical Tutorials</a></li>
+                    <li><a class="dropdown-item" href="./tutorials/electrical.html">Electrical Tutorials</a></li>
+                    <li><a class="dropdown-item" href="./tutorials/design.html">Design Tutorials</a></li>
+                    <li><a class="dropdown-item" href="./tutorials/administrative.html">Administrative Tutorials</a></li>
+                </ul>
             </div>
         </div>
     </div>

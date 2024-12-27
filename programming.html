@@ -138,11 +138,20 @@ Press ENTER to continue...</span>
                         <a class="nav-link" href="index.html#awards">AWARDS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#sponsers">SPONSERS</a>
+                        <a class="nav-link" href="index.html#sponsers">SPONSORS</a>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="./programming.html">PROGRAMMING TEAM</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamsDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            TEAMS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="teamsDropdown">
+                            <li><a class="dropdown-item" href="./programming.html">Programming Team</a></li>
+                            <li><a class="dropdown-item" href="./mechanical.html">Mechanical Team</a></li>
+                            <li><a class="dropdown-item" href="./electrical.html">Electrical Team</a></li>
+                            <li><a class="dropdown-item" href="./design.html">Design Team</a></li>
+                            <li><a class="dropdown-item" href="./administrative.html">Administrative Team</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -162,7 +171,8 @@ Press ENTER to continue...</span>
 
             
             <div class="tutorial-section">
-                <h2>Tutorial Resources</h2>
+                
+                <div class="code-header">public int ProgrammingResources() {</div>
                 <div class="tutorial-grid">
                     <!-- Row 1 -->
                     <a href="https://drive.google.com/file/d/1b6k2yzDvLeMBXJ5JN4jrlWOllVc5rVqL/view?usp=drive_link" class="tutorial-card" target="_blank">
@@ -214,19 +224,75 @@ Press ENTER to continue...</span>
                         </div>
                     </a>
                 </div>
+                <div class="code-footer">} <span class="comment">// End of ProgrammingResources</span></div>
             </div>
 
             <!-- <h2 class="section-title">Learning Resources</h2>
             <div class="resource-grid"> -->
                 
             <!-- </div> -->
-
-            <h2 class="section-title">Team Members</h2>
+            <div class="TeamMembers">
+            <div class="code-header">public String[] TeamMembers() {</div>
             <div class="code-block">
-                <div class="team-member">public TeamLead: shrubman8787,  SilvA</div>
-                <!-- Add more team members -->
-            </div>
+                <!-- <div class="team-member">
+                    // Team Leadership
+                    private static final String[] TEAM_LEADS = {"shrubman8787", "SilvA"};
+                </div> -->
+                
+                <div class="team-members-grid">
+                    <div class="member-card">
+                        <!-- <img src="./pic/member-avatar.png" alt="Member Avatar"> -->
+                        <h3>Shrubman8787</h3>
+                        <p class="year">FRC7130 7th Programming Lead</p>
+                        <div class="member-links">
+                            <a href="https://github.com/shrubman8787" target="_blank">GitHub</a>
+                            <a href="https://www.instagram.com/shuhsunyi/" target="_blank">Instagram</a>
+                        </div>
+                    </div>
 
+                    <div class="member-card">
+                        <!-- <img src="./pic/member-avatar.png" alt="Member Avatar"> -->
+                        <h3>SilvA</h3>
+                        <p class="year">FRC7130 7th Programming Member</p>
+                        <div class="member-links">
+                            <a href="https://github.com/Eagle962" target="_blank">GitHub</a>
+                            <a href="https://www.instagram.com/powerpoint._.0719/" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <!-- <img src="./pic/member-avatar.png" alt="Member Avatar"> -->
+                        <h3>Hong4507</h3>
+                        <p class="year">FRC7130 6th Programming Lead</p>
+                        <div class="member-links">
+                            <a href="https://github.com/Hong4507" target="_blank">GitHub</a>
+                            <a href="https://www.instagram.com/hong.7.16/" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+
+                    <!-- <div class="member-card">
+                        <img src="./pic/member-avatar.png" alt="Member Avatar">
+                        <h3>Member4</h3>
+                        <p class="year">Class of 2025</p>
+                        <div class="member-links">
+                            <a href="https://github.com/member4" target="_blank">GitHub</a>
+                            <a href="https://instagram.com/member4" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <img src="./pic/member-avatar.png" alt="Member Avatar">
+                        <h3>Member5</h3>
+                        <p class="year">Class of 2026</p>
+                        <div class="member-links">
+                            <a href="https://github.com/member5" target="_blank">GitHub</a>
+                            <a href="https://instagram.com/member5" target="_blank">Instagram</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="code-footer">} <span class="comment">// End of TeamMembers</span></div>
+            </div>
             <div class="code-footer">} <span class="comment">// End of ProgrammingTeam7130</span></div>
         </div>
     </div>
@@ -252,6 +318,7 @@ Press ENTER to continue...</span>
     const loadingBanner = document.querySelector('.loading-banner');
     let currentLine = 0;
     let currentChar = 0;
+    let animationComplete = false;
 
     // Set the hidden text first to maintain space
     document.querySelector('.typing').textContent = lines.join('\n');
@@ -271,17 +338,34 @@ Press ENTER to continue...</span>
                 const delays = [80, 100, 200, 200, 300, 500, 100, 200];
                 setTimeout(typeWriter, delays[currentLine - 1] || 50);
             }
+        } else {
+            animationComplete = true;
         }
     }
 
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter' && currentLine >= lines.length) {
+    function endAnimation() {
+        if (animationComplete) {
             loadingBanner.style.animation = 'fadeOut 0.5s ease-out forwards';
             setTimeout(() => {
                 document.querySelector('header').style.visibility = 'visible';
                 document.querySelector('header').style.animation = 'fadeIn 0.5s ease-in';
             }, 500);
         }
+    }
+
+    // Listen for any keypress
+    document.addEventListener('keydown', function(event) {
+        endAnimation();
+    });
+
+    // Listen for touch/click events
+    document.addEventListener('click', function(event) {
+        endAnimation();
+    });
+
+    // Listen for touch events (mobile)
+    document.addEventListener('touchstart', function(event) {
+        endAnimation();
     });
 
     window.addEventListener('load', typeWriter);

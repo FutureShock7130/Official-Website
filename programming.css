@@ -1,22 +1,69 @@
 body .programming-content {
     background-color: #1e1e1e;
     color: #d4d4d4;
-    padding-top: 80px !important;
+    padding-top: 40px !important;
     padding-bottom: 40px;
     min-height: 100vh;
 }
 
 body .programming-content .wrap {
-    margin-top: 80px !important;
+    margin-top: 40px !important;
 }
 
-body .programming-content .code-header {
+/* For the main programming team header */
+.code-header {
+    font-family: 'Consolas', monospace;
+    color: #569cd6;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    font-size: 2em;
+}
+
+/* For nested section headers */
+.tutorial-section .code-header {
     font-family: 'Consolas', monospace;
     color: #569cd6;
     border-bottom: 1px solid #404040;
     padding-bottom: 20px;
     margin-bottom: 30px;
     margin-top: 120px !important;
+    margin-left: 80px;
+    font-size: 1.5em;
+}
+
+.tutorial-section .code-footer {
+    font-family: 'Consolas', monospace;
+    color: #569cd6;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 120px !important;
+    margin-left: 80px;
+    font-size: 1.5em;
+}
+
+.TeamMembers .code-header {
+    font-family: 'Consolas', monospace;
+    color: #569cd6;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 120px !important;
+    margin-left: 80px;
+    font-size: 1.5em;
+}
+
+.TeamMembers .code-footer {
+    font-family: 'Consolas', monospace;
+    color: #569cd6;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 120px !important;
+    margin-left: 80px;
+    font-size: 1.5em;
 }
 
 .section-title {
@@ -29,8 +76,10 @@ body .programming-content .code-header {
     background-color: #2d2d2d;
     border-radius: 8px;
     padding: 20px;
+    padding-left: 5%;
     margin: 20px 0;
     font-family: 'Consolas', monospace;
+    margin-left: 80px;
 }
 
 .resource-grid {
@@ -96,8 +145,22 @@ body .programming-content .code-header {
 }
 
 .team-member {
-    color: #4ec9b0;
-    margin: 10px 0;
+    color: #d4d4d4;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+
+/* Java syntax highlighting */
+.team-member .keyword {
+    color: #569cd6;
+}
+
+.team-member .comment {
+    color: #6a9955;
+}
+
+.team-member .string {
+    color: #ce9178;
 }
 
 .code-footer {
@@ -112,6 +175,12 @@ body .programming-content .code-header {
 .code-header .params {
     color: #9cdcfe;  /* Light blue for parameters */
     font-style: italic;
+}
+
+.code-header h2 {
+    font-family: 'Consolas', monospace;
+    color: #569cd6;
+    font-size: 2em;
 }
 
 .code-footer {
@@ -239,4 +308,95 @@ body .programming-content .code-header {
 
 .navbar-toggler {
     border-color: #569cd6 !important;
+}
+
+.team-members-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem 0;
+    margin-left: 80px;
+    padding: 1rem;
+    overflow-x: auto;
+    width: calc(100% - 100px);
+    background: #1e1e1e;
+    border-radius: 8px;
+    border: 1px solid #404040;
+    white-space: nowrap;  /* Prevent wrapping */
+}
+
+/* Custom scrollbar styling */
+.team-members-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.team-members-grid::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    border-radius: 4px;
+}
+
+.team-members-grid::-webkit-scrollbar-thumb {
+    background: #404040;
+    border-radius: 4px;
+}
+
+.team-members-grid::-webkit-scrollbar-thumb:hover {
+    background: #4d4d4d;
+}
+
+.member-card {
+    display: inline-block;  /* Changed to inline-block */
+    background: #252526;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 250px;  /* Fixed width */
+    vertical-align: top;  /* Align tops of cards */
+    white-space: normal;  /* Allow text wrapping inside cards */
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.member-card h3 {
+    color: #569cd6;
+    margin-bottom: 0.5rem;
+}
+
+.member-card .year {
+    color: #6a9955;  /* Comment color */
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.member-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;  /* Allow links to wrap if needed */
+}
+
+.member-links a {
+    color: #ce9178;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ce9178;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.member-links a:hover {
+    background: #ce9178;
+    color: #1e1e1e;
 } 

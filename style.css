@@ -417,26 +417,27 @@ nav a:hover{
 
 .footer .icon {
     display: flex;
-    gap: 30px;  /* Increased gap between icons */
+    gap: 30px;  /* Nice spacing between icons */
     justify-content: center;
 }
 
 /* Bigger icons */
 .footer .icon img {
-    width: 45px;  /* Increased from 30px */
-    height: 45px;  /* Increased from 30px */
-    object-fit: contain;
-    filter: brightness(0.9);
-    transition: all 0.3s ease;
+    width: 100px;  /* Much bigger! */
+    height: 100px;  /* Keep it square */
+    filter: invert(1);  /* Invert the colors */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    object-fit: contain;  /* Prevents squishing */
+}
+
+.footer .icon img:hover {
+    transform: scale(1.1);
+    filter: invert(0.8);
 }
 
 .footer .icon a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;  /* Increased from 40px */
-    height: 60px;  /* Increased from 40px */
-    padding: 7px;  /* Slightly more padding */
+    margin: 0 10px;
+    display: inline-block;
 }
 
 .footer .copyright {
@@ -900,7 +901,7 @@ a:hover {
 }
 
 /* Logo sizes remain the same */
-.amd-size {
+/* .amd-size {
     max-width: 500px !important;
 }
 
@@ -917,7 +918,7 @@ a:hover {
 .ping3d-size {
     max-width: 350px !important;
     min-width: 300px;
-}
+} */
 
 .sponser h2{
     text-align: center;
@@ -946,11 +947,11 @@ a:hover {
 
 /* Sponsor logo sizes in percentages */
 img.sponsor-logo.igus-size {
-    width: 30%;  /* Adjust percentage as needed */
+    width: 100%;  /* Adjust percentage as needed */
 }
 
 img.sponsor-logo.misumi-size {
-    width: 40%;  /* Adjust percentage as needed */
+    width: 100%;  /* Adjust percentage as needed */
 }
 
 img.sponsor-logo.ping3d-size {
@@ -958,7 +959,7 @@ img.sponsor-logo.ping3d-size {
 }
 
 img.sponsor-logo.amd-size {
-    width: 50%;  /* Adjust percentage as needed */
+    width: 80%;  /* Adjust percentage as needed */
 }
 
 /* Container to control overall scale */
@@ -1239,6 +1240,66 @@ h2 {
     transform: translateY(-2px);
     color: white;
     text-decoration: none;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    background-color: #252526 !important;  /* Match the dark navbar theme */
+    border: 1px solid #404040;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    color: #ffffff !important;  /* White text */
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #2d2d2d !important;  /* Slightly lighter on hover */
+    color: #569cd6 !important;  /* VS Code blue on hover */
+}
+
+/* Make sure dropdown is positioned correctly */
+.nav-item.dropdown {
+    position: relative;
+}
+
+/* Smooth animation for dropdown */
+.dropdown-menu {
+    animation: fadeIn 0.3s ease;
+    margin-top: 0;  /* Remove default margin */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.team-link:hover {
+    transform: translateY(-5px);
+    color: inherit;
+}
+
+.team-link .block4 {
+    height: 100%;
 }
 
 
