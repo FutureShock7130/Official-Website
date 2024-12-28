@@ -100,6 +100,25 @@ header{
     height: 60px;
     background-color: #252526 !important;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    padding: 0;
+    margin: 0 20px;
+    display: block;
 }
 
 header img{
@@ -143,38 +162,47 @@ header nav a{
 }
 
 nav a:hover{
-    color:rgb(236, 110, 110) ;
+    color:rgb(236, 110, 110);
 }
 
 .banner {
-    position: relative;  /* This establishes the positioning context */
+    position: relative;
+    margin-top: 60px;
+    padding: 0;
+    width: 100%;
+    line-height: 0;
+    font-size: 0;
 }
 
 .banner-text {
     position: absolute;
-    top: 50%;          /* Move down 50% from the top */
-    left: 50%;         /* Move right 50% from the left */
-    transform: translate(-50%, -50%);  /* Perfect center adjustment! */
-    text-align: center;  /* Centers the text horizontally */
-    width: 100%;       /* Takes full width to ensure center alignment */
-    color: white;      /* Keep your chosen color here! */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: white;
 }
 
 .banner-text h1 {
     font-size: 72px;
-    margin: 0 auto;    /* Centers with auto margins */
-    padding: 0;        /* Removes any extra spacing */
+    margin: 0 auto;
+    padding: 0;
 }
 
 .banner-text h2 {
     font-size: 24px;
-    margin: 20px auto 0;  /* Top spacing between h1 and h2 */
+    margin: 20px auto 0;
     padding: 0;
 }
 
 .banner img{
-    margin: 60px 0px 0px 0px;
+    margin: 0;
+    padding: 0;
     width: 100%;
+    height: auto;
+    display: block;
+    
 }
 
 .banner a{
@@ -250,7 +278,7 @@ nav a:hover{
 }
 
 .block4:hover {
-    transform: translateY(-5px);  /* adds a wittle hover effect! */
+    transform: translateY(-5px);
 }
 
 .block4 img {
@@ -302,19 +330,19 @@ nav a:hover{
 }
 
 .prospect {
-    background-color: #1e1e1e !important;  /* Match body background */
+    background-color: #1e1e1e !important;
     color: #ffffff;
 }
 
 .prospect .card {
-    background-color: #2d2d2d;  /* Slightly lighter than background */
-    border: 1px solid #404040;  /* Subtle border */
+    background-color: #2d2d2d;
+    border: 1px solid #404040;
     transition: all 0.3s ease;
 }
 
 .prospect .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(86, 156, 214, 0.2);  /* VS Code blue shadow */
+    box-shadow: 0 5px 15px rgba(86, 156, 214, 0.2);
 }
 
 .prospect .card h3 {
@@ -322,13 +350,12 @@ nav a:hover{
 }
 
 .prospect .card p {
-    color: #d4d4d4;  /* Slightly dimmer white for better readability */
+    color: #d4d4d4;
 }
 
 .prospect .card img {
-    /* If the icons are dark, invert them */
     filter: invert(1);
-    opacity: 0.9;  /* Slightly reduce opacity for better look */
+    opacity: 0.9;
 }
 
 .prospect .wrap{
@@ -417,17 +444,17 @@ nav a:hover{
 
 .footer .icon {
     display: flex;
-    gap: 30px;  /* Nice spacing between icons */
+    gap: 30px;
     justify-content: center;
 }
 
 /* Bigger icons */
 .footer .icon img {
-    width: 100px;  /* Much bigger! */
-    height: 100px;  /* Keep it square */
-    filter: invert(1);  /* Invert the colors */
+    width: 100px;
+    height: 100px;
+    filter: invert(1);
     transition: transform 0.3s ease, filter 0.3s ease;
-    object-fit: contain;  /* Prevents squishing */
+    object-fit: contain;
 }
 
 .footer .icon img:hover {
@@ -471,15 +498,18 @@ nav a:hover{
     
     header{
         display: flex;
-
+        align-items: center;
     }
     header .logo{
-        width: 10%;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
     }
     header nav{
         background-color:transparent;
         height: 60px;
-        width: 90%;
+        width: auto;
         position: relative;
         left:0;
         top:0;
@@ -682,7 +712,7 @@ nav a:hover{
     /* Sponsor item animations */
     .sponsor-item {
         opacity: 0;
-        transform: translateX(-50px);  /* Start from left */
+        transform: translateX(-50px);
         transition: all 1s ease;
     }
 
@@ -738,10 +768,10 @@ nav a:hover{
     
     .tutorial-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);  /* Makes 3 equal columns */
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         padding: 20px;
-        max-width: 1200px;  /* Adjust this for overall grid width */
+        max-width: 1200px;
         margin: 0 auto;
     }
 
@@ -763,7 +793,7 @@ nav a:hover{
         /* Add these to make credits stick to bottom */
         display: flex;
         flex-direction: column;
-        min-height: 200px;  /* Adjust this value based on your needs */
+        min-height: 200px;
         position: relative;
     }
     
@@ -773,7 +803,7 @@ nav a:hover{
     }
     
     .file-credits {
-        margin-top: auto;  /* This pushes credits to bottom */
+        margin-top: auto;
         padding-top: 10px;
         border-top: 1px solid #eee;
         font-size: 0.8em;
@@ -781,19 +811,19 @@ nav a:hover{
     }
 
     .download-icon {
-        margin: 15px 0;  /* Add some space between content and credits */
+        margin: 15px 0;
     }
 
     /* Makes it responsive! */
     @media (max-width: 768px) {
         .tutorial-grid {
-            grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablets */
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
     @media (max-width: 480px) {
         .tutorial-grid {
-            grid-template-columns: 1fr;  /* 1 column on phones */
+            grid-template-columns: 1fr;
         }
     }
 }
@@ -802,8 +832,8 @@ body {
     margin: 0;
     padding: 0;
     opacity: 1 !important;
-    background-color: #1e1e1e !important;  /* Dark grey background */
-    color: #ffffff !important;  /* White text */
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
 }
 
 /* Make sure links and other text elements are also white */
@@ -813,11 +843,11 @@ p, h1, h2, h3, h4, h5, h6, span, div {
 
 /* Keep links visible */
 a {
-    color: #569cd6;  /* VS Code blue for links */
+    color: #569cd6;
 }
 
 a:hover {
-    color: #9cdcfe;  /* Lighter blue on hover */
+    color: #9cdcfe;
 }
 
 /* Make sure headers and important text stay white */
@@ -831,7 +861,7 @@ a:hover {
 }
 
 .carousel-item {
-    min-height: 300px;  /* or whatever height you want! */
+    min-height: 300px;
 }
 
 .block4 {
@@ -840,27 +870,27 @@ a:hover {
 }
 
 .block4 img {
-    max-width: 200px;  /* adjust as needed! */
+    max-width: 200px;
     margin: 20px auto;
 }
 
 .team-logo {
     width: 926px;
     height: 810px;
-    object-fit: contain;  /* This keeps the aspect ratio nice and clean! */
-    max-width: 100%;     /* This makes it responsive for mobile devices */
-    height: auto;        /* This maintains aspect ratio when scaling down */
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
 }
 
 .col_pic {
-    width: 50%;  /* Takes up half the container */
+    width: 50%;
     padding: 20px;
 }
 
 .col_pic img {
     width: 100%;
-    max-width: 463px;     /* Half of 926px for better scaling */
-    height: auto;         /* Maintains aspect ratio */
+    max-width: 463px;
+    height: auto;
     object-fit: contain;
     display: block;
     margin: 0 auto;
@@ -888,16 +918,16 @@ a:hover {
     background-color: #666666 !important;
     border-radius: 8px;
     min-height: 200px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);  /* Bouncy animation */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
 }
 
 /* Enhanced hover effect */
 .sponsor-item:hover {
-    transform: translateY(-10px) scale(1.05);  /* Added scale */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);  /* Deeper shadow */
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     background-color: #777777 !important;
-    z-index: 1;  /* Ensure it pops above others */
+    z-index: 1;
 }
 
 /* Logo sizes remain the same */
@@ -947,19 +977,19 @@ a:hover {
 
 /* Sponsor logo sizes in percentages */
 img.sponsor-logo.igus-size {
-    width: 100%;  /* Adjust percentage as needed */
+    width: 100%;
 }
 
 img.sponsor-logo.misumi-size {
-    width: 100%;  /* Adjust percentage as needed */
+    width: 100%;
 }
 
 img.sponsor-logo.ping3d-size {
-    width: 80%;  /* Adjust percentage as needed */
+    width: 80%;
 }
 
 img.sponsor-logo.amd-size {
-    width: 80%;  /* Adjust percentage as needed */
+    width: 80%;
 }
 
 /* Container to control overall scale */
@@ -995,7 +1025,7 @@ img.sponsor-logo.amd-size {
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
-    background-color: #569cd6;  /* VS Code blue for accent */
+    background-color: #569cd6;
 }
 
 /* Optional: Add a code-like prefix */
@@ -1011,7 +1041,7 @@ img.sponsor-logo.amd-size {
 }
 
 .sponsor-logo{
-    max-width: 500px; 
+    max-width: 500px;
     height: auto;
 }
 
@@ -1121,7 +1151,7 @@ body {
 
 /* Make sure cards and sections are visible */
 .tutorial-card, .block4, .sponsor-item {
-    background-color: rgba(255, 255, 255, 0.05);  /* Slightly lighter than background */
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
 }
 
@@ -1134,27 +1164,27 @@ h1, h2, h3 {
 .logo img {
     max-width: 100%;
     height: auto;
-    display: block;  /* This can help prevent background issues */
+    display: block;
 }
 
 /* Make the logo container transparent */
 .logo {
     background-color: transparent !important;
-    height: 60px;  /* Match your navbar height */
+    height: 60px;
     display: flex;
     align-items: center;
 }
 
 /* Control the image size */
 .logo img {
-    max-height: 50px;  /* Slightly smaller than container */
-    width: auto;  /* Maintain aspect ratio */
+    max-height: 50px;
+    width: auto;
     display: block;
 }
 
 /* Ensure the header/navbar is using the dark theme color */
 header {
-    background-color: #252526 !important;  /* Same as navbar color */
+    background-color: #252526 !important;
 }
 
 .navbar {
@@ -1163,8 +1193,8 @@ header {
 
 /* Override the grey color for all h2s */
 h2 {
-    color: #ffffff !important;  /* Force white color */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);  /* Add glow */
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 /* Remove the color property from .col_text h2 */
@@ -1178,13 +1208,13 @@ h2 {
 
 /* Update navbar link colors */
 .navbar-nav .nav-link {
-    color: #ffffff !important;  /* Force white color */
-    transition: color 0.3s ease;  /* Smooth transition for hover */
+    color: #ffffff !important;
+    transition: color 0.3s ease;
 }
 
 /* Optional: hover effect */
 .navbar-nav .nav-link:hover {
-    color: #569cd6 !important;  /* VS Code blue on hover */
+    color: #569cd6 !important;
 }
 
 .sponsor-invitation {
@@ -1210,7 +1240,7 @@ h2 {
     width: 80px;
     height: 80px;
     margin-bottom: 20px;
-    filter: invert(1);  /* If using a dark icon */
+    filter: invert(1);
 }
 
 .invitation-card h3 {
@@ -1244,7 +1274,7 @@ h2 {
 
 /* Dropdown Menu Styles */
 .dropdown-menu {
-    background-color: #252526 !important;  /* Match the dark navbar theme */
+    background-color: #252526 !important;
     border: 1px solid #404040;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -1254,14 +1284,14 @@ h2 {
 }
 
 .dropdown-item {
-    color: #ffffff !important;  /* White text */
+    color: #ffffff !important;
     padding: 10px 20px;
     transition: all 0.3s ease;
 }
 
 .dropdown-item:hover {
-    background-color: #2d2d2d !important;  /* Slightly lighter on hover */
-    color: #569cd6 !important;  /* VS Code blue on hover */
+    background-color: #2d2d2d !important;
+    color: #569cd6 !important;
 }
 
 /* Make sure dropdown is positioned correctly */
@@ -1272,7 +1302,7 @@ h2 {
 /* Smooth animation for dropdown */
 .dropdown-menu {
     animation: fadeIn 0.3s ease;
-    margin-top: 0;  /* Remove default margin */
+    margin-top: 0;
 }
 
 @keyframes fadeIn {
@@ -1300,6 +1330,13 @@ h2 {
 
 .team-link .block4 {
     height: 100%;
+}
+
+/* If there's any space above banner */
+#home {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 
