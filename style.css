@@ -323,8 +323,21 @@ nav a:hover{
     margin-top: 10px;
 }
 .awards .col_pic{
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.awards .col_pic img {
+    width: 300%;
+    height: auto;
+    /* max-width: 500px; */
+    transition: transform 0.3s ease;
+}
+
+.awards .col_pic img:hover {
+    transform: scale(1.05);
+}
+
 .awards p{
     font-size: 16px;
 }
@@ -685,12 +698,13 @@ nav a:hover{
         width: 60%;
         text-align: left;
         padding-top: 30px;
-        padding-left:10%;
+        
     }
 
     .footer .wrap .icon{
         display: flex;
         width: 40%;
+        padding-left: 50px;
     }
 
     .footer .wrap .icon a{
@@ -1337,6 +1351,21 @@ h2 {
     margin: 0;
     padding: 0;
     line-height: 0;
+}
+
+.award-bullet {
+    color: #569cd6;  /* Bootstrap blue color */
+    text-shadow: none;  /* Remove any outline effect */
+}
+
+/* If you want to apply to all awards without adding spans */
+.awards p {
+    color: white;  /* Keep text white */
+}
+
+.awards p::first-letter {
+    color: #569cd6;  /* Make bullets blue */
+    text-shadow: none;  /* Remove outline */
 }
 
 

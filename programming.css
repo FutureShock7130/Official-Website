@@ -44,6 +44,10 @@ body .programming-content .wrap {
     font-size: 1.5em;
 }
 
+.tutorial-section .tutorial-grid .h3:hover{
+    color: #569cd6 !important;
+}
+
 .TeamMembers .code-header {
     font-family: 'Consolas', monospace;
     color: #569cd6;
@@ -285,9 +289,12 @@ body .programming-content .wrap {
 
 /* Style the menu items */
 .navbar .nav-link {
-    color: #569cd6 !important;  /* VS Code blue */
-    font-family: 'Consolas', monospace;  /* Match our code font */
-    transition: opacity 0.3s ease;
+    color: #569cd6 !important;
+    padding: 0 10px;
+    font-size: 16px;  /* Match home page font size */
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
 }
 
 /* Hover effect */
@@ -399,4 +406,24 @@ body .programming-content .wrap {
 .member-links a:hover {
     background: #ce9178;
     color: #1e1e1e;
-} 
+}
+
+/* For dropdown items */
+.dropdown-item {
+    font-size: 16px;  /* Match the same size */
+    color: #ffffff !important;
+    padding: 10px 20px;
+}
+
+.tutorial-card {
+    transition: all 0.3s ease;
+}
+
+.tutorial-card h3 {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.tutorial-card:hover h3 {
+    color: #569cd6;
+}
