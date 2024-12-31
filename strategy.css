@@ -1,0 +1,147 @@
+/* Import your main styles if needed */
+@import url('style.css');
+
+/* Strategy Page Specific Styles */
+.strategy-container {
+    padding: 40px;
+    margin: 120px auto 40px;  /* Added top margin for header */
+    max-width: 1400px;
+    margin-top: 60px;
+    color: #ffffff !important;  /* Force white text */
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    z-index: 1 !important;  /* Lower than navbar */
+    position: relative;
+}
+
+.strategy-container h2,
+.strategy-container h3 {
+    color: #ffffff !important;  /* Force white headings */
+}
+
+.strategy-section {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.strategy-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.strategy-section p {
+    color: #d4d4d4 !important;  /* Light grey for paragraph text */
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.strategy-card {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.strategy-card h3 {
+    color: #569cd6 !important;  /* VS Code blue for card headings */
+    margin-bottom: 20px;
+}
+
+.strategy-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.strategy-card li {
+    color: #d4d4d4 !important;  /* Light grey for list items */
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.strategy-card li::before {
+    content: "•";
+    color: #569cd6;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+} 
+
+body {
+    background-color: #1e1e1e;  /* Match your main site background */
+} 
+
+.wrap {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+} 
+
+.strategy-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.strategy-link-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333333;
+    border-radius: 6px;
+    color: #d4d4d4;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.strategy-link-box:hover {
+    background-color: #404040;
+    transform: translateX(5px);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: #569cd6;
+    font-size: 1.2em;
+}
+
+.strategy-link-box:hover .link-arrow {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+} 
+
+/* Make sure dropdown is above content */
+.navbar {
+    z-index: 1100 !important;  /* Higher than content */
+}
+
+.dropdown-menu {
+    z-index: 1100 !important;  /* Same as navbar */
+}
+
+/* Make sure header stays on top */
+header {
+    z-index: 1100 !important;  /* Same as navbar */
+} 

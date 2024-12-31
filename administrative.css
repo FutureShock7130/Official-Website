@@ -1,0 +1,134 @@
+/* Import your main styles if needed */
+@import url('style.css');
+
+.administrative-container {
+    padding: 40px;
+    margin: 120px auto 40px;
+    max-width: 1400px;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    z-index: 1;
+    position: relative;
+}
+
+.administrative-container h2,
+.administrative-container h3 {
+    color: #ffffff !important;
+}
+
+.administrative-section {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.administrative-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.administrative-section p {
+    color: #d4d4d4 !important;
+}
+
+.administrative-grid {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.administrative-card {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.administrative-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.administrative-card h3 {
+    color: #569cd6 !important;
+    margin-bottom: 20px;
+}
+
+.administrative-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.administrative-link-box {
+    padding: 25px;
+    margin-bottom: 20px;
+    background-color: #333333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.administrative-link-box:hover {
+    transform: translateY(-5px);
+    background-color: #404040;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.link-arrow {
+    font-size: 1.5em;
+}
+
+.administrative-link-box:hover .link-arrow {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+
+.link-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.link-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.link-description {
+    font-size: 0.9em;
+    color: #a0a0a0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .administrative-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+body {
+    background-color: #1e1e1e;
+}
+
+.wrap {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Fix dropdown menu z-index */
+.navbar {
+    z-index: 1100 !important;
+}
+
+.dropdown-menu {
+    z-index: 1100 !important;
+}
+
+header {
+    z-index: 1100 !important;
+} 
