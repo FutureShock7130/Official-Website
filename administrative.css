@@ -36,8 +36,10 @@
 }
 
 .administrative-grid {
-    max-width: 800px;
-    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .administrative-card {
@@ -45,6 +47,9 @@
     border-radius: 8px;
     padding: 40px;
     transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .administrative-card:hover {
@@ -61,6 +66,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex-grow: 1;
 }
 
 .administrative-link-box {
@@ -104,6 +110,12 @@
 }
 
 /* Responsive design */
+@media (max-width: 1200px) {
+    .administrative-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .administrative-grid {
         grid-template-columns: 1fr;
