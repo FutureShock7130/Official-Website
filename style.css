@@ -270,6 +270,10 @@ nav a:hover{
     margin-top: 50px;
 }
 
+.team-logo {
+    padding-top: 50px;
+}
+
 .block4 {
     padding: 20px;
     margin: 15px;
@@ -586,7 +590,6 @@ nav a:hover{
     }
 
     .intro_frc .wrap{
-        padding-top: 80px;
         margin: auto;
         width: 960px;
         display: flex;
@@ -598,14 +601,12 @@ nav a:hover{
     }
 
     .about_us .wrap{
-        padding-top: 80px;
         margin: auto;
         width: 960px;
         display: flex;
     }
     
     .about_us .wrap .col_text{
-        padding-top: 100px;
         width: 60%;
     }
     
@@ -894,6 +895,11 @@ a:hover {
     object-fit: contain;
     max-width: 100%;
     height: auto;
+    padding-top: 100px;
+}
+
+.frc-logo {
+    padding-top: 60px;
 }
 
 .col_pic {
